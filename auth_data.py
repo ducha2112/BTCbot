@@ -1,1 +1,11 @@
-token = '5662537623:AAGl3eoEK93bVmNFxSphch-ZbOi_Eqgby6k'
+import os
+from dotenv import load_dotenv
+
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
+
+
+
+token = os.getenv('token')
